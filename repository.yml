@@ -19,5 +19,5 @@
 
 repo.name: stm32lxx_bsp
 repo.versions:
-    "0.0.0": "develop"
+    "0.0.0": "master"
     "0-latest": "0.0.0"
