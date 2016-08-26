@@ -159,7 +159,7 @@ typedef enum
   * @}
   */
 
-#include "core_cm3.h"
+#include "cmsis-core/core_cm3.h"
 #include "system_stm32l1xx.h"
 #include <stdint.h>
 
