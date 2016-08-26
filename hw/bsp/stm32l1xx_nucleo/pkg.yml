@@ -33,5 +33,4 @@ pkg.linkerscript: "STM32L152XE_FLASH.ld"
 pkg.cflags: 
 pkg.deps:
     - hw/mcu/stm/stm32l1xx
-    - libs/baselibc
     - "@apache-mynewt-core/libs/baselibc"

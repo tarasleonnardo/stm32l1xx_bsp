@@ -26,6 +26,6 @@ pkg.keywords:
     - stm32l1
 
 pkg.deps: 
-    - hw/hal
-    - libs/cmsis-core
+    - "@apache-mynewt-core/hw/hal"
+    - "@apache-mynewt-core/libs/cmsis-core"
     - compiler/arm-none-eabi-m3
