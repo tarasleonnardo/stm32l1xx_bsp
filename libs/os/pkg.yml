@@ -24,8 +24,8 @@ pkg.homepage: ""
 pkg.keywords:
 
 pkg.deps:
-    - libs/testutil
-    - libs/util
+    - "@apache-mynewt-core/libs/testutil"
+    - "@apache-mynewt-core/libs/util"
 pkg.req_apis:
     - console
 
