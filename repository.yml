@@ -17,8 +17,8 @@
 # under the License.
 #
 
-repo.name: stm32lxx_bsp
+repo.name: stm32l1xx_bsp
 repo.versions:
     "0.0.0": "master"
-    "0.0.1": "test"
+
     "0-latest": "0.0.0"
