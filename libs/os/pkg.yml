@@ -23,15 +23,20 @@ pkg.author: "Taras"
 pkg.homepage: ""
 pkg.keywords:
 
+pkg.arch:
+    - cortex_m3
 pkg.deps:
-    - "@apache-mynewt-core/libs/testutil"
-    - "@apache-mynewt-core/libs/util"
-pkg.req_apis:
-    - console
+    - "@apache-mynewt-core/libs/os"
 
-pkg.deps.SHELL:
-    - libs/shell 
-pkg.cflags.SHELL: -DSHELL_PRESENT 
+pkg.api: 
+    - stm32l1_os_api
+
+#pkg.req_apis:
+#    - console
+
+#pkg.deps.SHELL:
+#    - libs/shell
+#pkg.cflags.SHELL: -DSHELL_PRESENT 
 
 # Satisfy capability dependencies for the self-contained test executable.
-pkg.deps.SELFTEST: libs/console/stub
+#pkg.deps.SELFTEST: libs/console/stub

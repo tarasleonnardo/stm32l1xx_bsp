@@ -17,18 +17,24 @@
 # under the License.
 #
 
-compiler.path.cc: arm-none-eabi-gcc
-compiler.path.archive: arm-none-eabi-ar
-compiler.path.as: arm-none-eabi-gcc -x assembler-with-cpp
-compiler.path.objdump: arm-none-eabi-objdump
-compiler.path.objsize: arm-none-eabi-size
-compiler.path.objcopy: arm-none-eabi-objcopy
+pkg.name: libs/os_arch
+pkg.description: Mynewt operating system os files for cortex-m3.
+pkg.author: "Taras"
+pkg.homepage: ""
+pkg.keywords:
 
-compiler.flags.default: -g -mcpu=cortex-m3 -mthumb-interwork -mthumb -Wall -Werror -fno-exceptions -ffunction-sections -fdata-sections
-compiler.flags.optimized: [compiler.flags.default, -Os -ggdb]
-compiler.flags.debug: [compiler.flags.default, -O1 -ggdb]
+pkg.arch:
+    - cortex_m3
+pkg.deps:
+    - "@apache-mynewt-core/libs/os"
+    - "@stm32l1xx_bsp/libs/os"
 
-#-Wl,--gc-sections
-compiler.ld.flags: -static -lgcc -Wl,--gc-sections
-compiler.ld.resolve_circular_deps: true
-compiler.ld.mapfile: true
+#pkg.req_apis:
+#    - console
+
+#pkg.deps.SHELL:
+#    - libs/shell
+#pkg.cflags.SHELL: -DSHELL_PRESENT 
+
+# Satisfy capability dependencies for the self-contained test executable.
+#pkg.deps.SELFTEST: libs/console/stub
