@@ -34,3 +34,4 @@ pkg.cflags:
 pkg.deps:
     - hw/mcu/stm/stm32l1xx
     - "@apache-mynewt-core/libs/baselibc"
+    - "@apache-mynewt-core/libs/cmsis-core"
